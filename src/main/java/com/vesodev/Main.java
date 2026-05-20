@@ -1,6 +1,11 @@
 package com.vesodev;
 
 import javax.swing.*;
+import javax.swing.text.BadLocationException;
+import javax.swing.text.DefaultCaret;
+import javax.swing.text.Style;
+import javax.swing.text.StyleConstants;
+import javax.swing.text.StyledDocument;
 import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.io.File;
@@ -30,7 +35,8 @@ import java.nio.file.Files;
 
 public class Main {
     private final JFrame frame = new JFrame("ESP Monitor Viewer");
-    private final JTextArea logArea = new JTextArea();
+    private final JTextPane logPane = new JTextPane();
+    private JScrollPane logScrollPane; // hold reference so we can preserve viewport when auto-scroll disabled
 
     // Field labels
     private final JLabel elapsedLabel = new JLabel("N/A");
@@ -57,6 +63,9 @@ public class Main {
 
     // Generic numbers area (shows all numeric tokens found on latest line)
     private final JTextArea numbersArea = new JTextArea();
+
+    // UI options
+    private final JCheckBox autoScrollCheck = new JCheckBox("Auto-scroll", true);
 
     // Graph component
     private final TimeSeriesGraph graph = new TimeSeriesGraph(200);
@@ -115,8 +124,32 @@ public class Main {
         frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         frame.setSize(1000, 700);
 
-        logArea.setEditable(false);
-        JScrollPane logScroll = new JScrollPane(logArea);
+        logPane.setEditable(false);
+        logScrollPane = new JScrollPane(logPane);
+        JScrollPane logScroll = logScrollPane;
+
+        // create styles for log pane
+        StyledDocument doc = logPane.getStyledDocument();
+        Style def = logPane.addStyle("default", null);
+        StyleConstants.setForeground(def, Color.BLACK);
+        Style warn = logPane.addStyle("warn", def);
+        StyleConstants.setForeground(warn, new Color(200,140,0)); // amber/orange for warnings
+        StyleConstants.setBold(warn, true);
+        Style err = logPane.addStyle("err", def);
+        StyleConstants.setForeground(err, Color.RED);
+        StyleConstants.setBold(err, true);
+
+        // Configure caret auto-scroll policy and checkbox listener
+        DefaultCaret dc = (DefaultCaret) logPane.getCaret();
+        dc.setUpdatePolicy(autoScrollCheck.isSelected() ? DefaultCaret.ALWAYS_UPDATE : DefaultCaret.NEVER_UPDATE);
+        autoScrollCheck.addItemListener(ev -> {
+            boolean sel = autoScrollCheck.isSelected();
+            dc.setUpdatePolicy(sel ? DefaultCaret.ALWAYS_UPDATE : DefaultCaret.NEVER_UPDATE);
+            if (sel) {
+                // move caret to end
+                SwingUtilities.invokeLater(() -> logPane.setCaretPosition(logPane.getDocument().getLength()));
+            }
+        });
 
         JPanel top = new JPanel(new BorderLayout(8, 8));
 
@@ -134,12 +167,14 @@ public class Main {
         northLeft.add(wdPanel);
 
         top.add(northLeft, BorderLayout.CENTER);
-        // replace single start button with a small panel for start + report + feed sample + test graph
-        JPanel btnPanel = new JPanel(new GridLayout(1,4,4,4));
+        // replace single start button with a small panel for start + report + feed sample + test graph + autoscroll
+        JPanel btnPanel = new JPanel(new GridLayout(1,5,4,4));
         btnPanel.add(startBtn);
         btnPanel.add(reportBtn);
         btnPanel.add(feedSampleBtn);
         btnPanel.add(testGraphBtn);
+        autoScrollCheck.setFocusable(false);
+        btnPanel.add(autoScrollCheck);
         top.add(btnPanel, BorderLayout.EAST);
 
         browseDirBtn.addActionListener(e -> {
@@ -368,14 +403,56 @@ public class Main {
     }
 
     private void appendLog(String text) {
+        // Determine style based on first non-space character: W/w -> warn, E/e -> err
+        Runnable ins = () -> {
+            try {
+                StyledDocument sd = logPane.getStyledDocument();
+                // pick style
+                String styleName = "default";
+                int i = 0;
+                while (i < text.length() && Character.isWhitespace(text.charAt(i))) i++;
+                if (i < text.length()) {
+                    char c = text.charAt(i);
+                    if (c == 'W' || c == 'w') styleName = "warn";
+                    else if (c == 'E' || c == 'e') styleName = "err";
+                }
+                // rely on caret update policy (DefaultCaret) to handle auto-scroll; just insert text
+                // If auto-scroll disabled, capture caret and viewport to restore them after insert
+                Point viewPos = null;
+                int caretPos = -1;
+                if (!autoScrollCheck.isSelected() && logScrollPane != null) {
+                    JViewport vp = logScrollPane.getViewport();
+                    viewPos = vp.getViewPosition();
+                    caretPos = logPane.getCaretPosition();
+                }
+
+                sd.insertString(sd.getLength(), text + "\n", logPane.getStyle(styleName));
+
+                if (autoScrollCheck.isSelected()) {
+                    // ensure caret at end
+                    logPane.setCaretPosition(sd.getLength());
+                } else {
+                    // restore caret and viewport to preserve user's view
+                    if (caretPos >= 0) {
+                        int docLen = logPane.getDocument().getLength();
+                        int pos = Math.min(caretPos, docLen);
+                        logPane.setCaretPosition(pos);
+                    }
+                    if (viewPos != null && logScrollPane != null) {
+                        JViewport vp = logScrollPane.getViewport();
+                        vp.setViewPosition(viewPos);
+                    }
+                }
+
+            } catch (BadLocationException ble) {
+                // fallback to printing to stdout and append without style
+                System.err.println("appendLog failed: " + ble.getMessage());
+            }
+        };
         if (SwingUtilities.isEventDispatchThread()) {
-            logArea.append(text + "\n");
-            logArea.setCaretPosition(logArea.getDocument().getLength());
+            ins.run();
         } else {
-            SwingUtilities.invokeLater(() -> {
-                logArea.append(text + "\n");
-                logArea.setCaretPosition(logArea.getDocument().getLength());
-            });
+            SwingUtilities.invokeLater(ins);
         }
     }
 
