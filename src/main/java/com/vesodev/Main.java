@@ -3,6 +3,7 @@ package com.vesodev;
 import javax.swing.*;
 import java.awt.*;
 import java.awt.event.ActionEvent;
+import java.io.File;
 import java.util.ArrayDeque;
 import java.util.Deque;
 import java.util.regex.Matcher;
@@ -42,6 +43,10 @@ public class Main {
     private final TimeSeriesGraph graph = new TimeSeriesGraph(200);
 
     private final JTextField commandField = new JTextField("idf.py monitor");
+    // new: working directory
+    private final JTextField workingDirField = new JTextField("");
+    private final JButton browseDirBtn = new JButton("…");
+
     private final JButton startBtn = new JButton("Start");
     private final MonitorProcess monitor = new MonitorProcess();
 
@@ -66,9 +71,32 @@ public class Main {
         JScrollPane logScroll = new JScrollPane(logArea);
 
         JPanel top = new JPanel(new BorderLayout(8, 8));
-        top.add(new JLabel("Command:"), BorderLayout.WEST);
-        top.add(commandField, BorderLayout.CENTER);
+
+        JPanel cmdPanel = new JPanel(new BorderLayout(4,4));
+        cmdPanel.add(new JLabel("Command:"), BorderLayout.WEST);
+        cmdPanel.add(commandField, BorderLayout.CENTER);
+
+        JPanel wdPanel = new JPanel(new BorderLayout(4,4));
+        wdPanel.add(new JLabel("Working dir:"), BorderLayout.WEST);
+        wdPanel.add(workingDirField, BorderLayout.CENTER);
+        wdPanel.add(browseDirBtn, BorderLayout.EAST);
+
+        JPanel northLeft = new JPanel(new GridLayout(2,1,4,4));
+        northLeft.add(cmdPanel);
+        northLeft.add(wdPanel);
+
+        top.add(northLeft, BorderLayout.CENTER);
         top.add(startBtn, BorderLayout.EAST);
+
+        browseDirBtn.addActionListener(e -> {
+            JFileChooser fc = new JFileChooser();
+            fc.setFileSelectionMode(JFileChooser.DIRECTORIES_ONLY);
+            int res = fc.showOpenDialog(frame);
+            if (res == JFileChooser.APPROVE_OPTION) {
+                File f = fc.getSelectedFile();
+                workingDirField.setText(f.getAbsolutePath());
+            }
+        });
 
         // Right side: grid of fields
         JPanel fields = new JPanel();
@@ -129,18 +157,19 @@ public class Main {
             if (cmdText.isEmpty()) return;
             String[] cmd = cmdText.split("\\s+");
             try {
-                monitor.start(cmd, this::handleLine);
-                startBtn.setText("Stop");
-                appendLog("Started: " + cmdText);
-            } catch (Exception ex) {
-                appendLog("Failed to start: " + ex.getMessage());
-            }
-        } else {
-            monitor.stop();
-            startBtn.setText("Start");
-            appendLog("Stopped.");
-        }
-    }
+                String wd = workingDirField.getText().trim();
+                monitor.start(cmd, wd.isEmpty() ? null : wd, this::handleLine);
+                 startBtn.setText("Stop");
+                 appendLog("Started: " + cmdText);
+             } catch (Exception ex) {
+                 appendLog("Failed to start: " + ex.getMessage());
+             }
+         } else {
+             monitor.stop();
+             startBtn.setText("Start");
+             appendLog("Stopped.");
+         }
+     }
 
     private void handleLine(String line) {
         SwingUtilities.invokeLater(() -> {
@@ -336,3 +365,4 @@ public class Main {
         SwingUtilities.invokeLater(Main::new);
     }
 }
+
