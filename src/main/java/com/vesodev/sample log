@@ -1,0 +1,419 @@
+I (258508) COORDINATOR_TASK: Elapsed: 158000 ms, Stage: 0, Phase: 0, Setpoint: 36.47 C
+I (258508) PID_COMPONENT: PID - SP: 36.47, PV: 39.92, err: -3.45, dt: 1.000s, dyn_max: 1.00, P: -1.035, I: 0.455, D: -0.003, Out: 0.000
+I (258608) MS9024: CDAB decode: raw=0x421F7BD4 → 39.8709 C
+I (258608) DEVICE_MANAGER_TASK: Device manager tick: updated device temp_sensor (ID: 1)
+I (258778) MS9024: CDAB decode: raw=0x422758F8 → 41.8369 C
+I (258778) DEVICE_MANAGER_TASK: Device manager tick: updated device temp_sensor (ID: 2)
+I (258928) MS9024: CDAB decode: raw=0x42182B11 → 38.0421 C
+I (258928) DEVICE_MANAGER_TASK: Device manager tick: updated device temp_sensor (ID: 3)
+I (259068) MS9024: CDAB decode: raw=0x422629DC → 41.5409 C
+I (259068) DEVICE_MANAGER_TASK: Device manager tick: updated device temp_sensor (ID: 4)
+I (259168) DEVICE_MANAGER_TASK: Device manager tick complete, posting update event and heartbeat
+I (259168) TEMP_PROCESSOR_EVENTS: Device manager updated event received
+I (259178) TEMP_PROCESSOR: Temperature samples range: 38.04°C - 41.84°C
+I (259178) TEMP_PROCESSOR_TASK: Processed average temperature: 39.88 C
+I (259458) MS9024: CDAB decode: raw=0x4218C330 → 38.1906 C
+I (259458) DEVICE_MANAGER_TASK: Device manager tick: updated device temp_sensor (ID: 0)
+I (259508) COORDINATOR_TASK: Elapsed: 159000 ms, Stage: 0, Phase: 0, Setpoint: 36.51 C
+I (259508) PID_COMPONENT: PID - SP: 36.51, PV: 39.88, err: -3.37, dt: 1.000s, dyn_max: 1.00, P: -1.011, I: 0.456, D: 0.001, Out: 0.000
+I (259608) MS9024: CDAB decode: raw=0x421F244E → 39.7855 C
+I (259608) DEVICE_MANAGER_TASK: Device manager tick: updated device temp_sensor (ID: 1)
+I (259758) MS9024: CDAB decode: raw=0x4228AAA4 → 42.1666 C
+I (259768) DEVICE_MANAGER_TASK: Device manager tick: updated device temp_sensor (ID: 2)
+I (259918) MS9024: CDAB decode: raw=0x4218B268 → 38.1742 C
+I (259918) DEVICE_MANAGER_TASK: Device manager tick: updated device temp_sensor (ID: 3)
+I (260058) MS9024: CDAB decode: raw=0x4226A13A → 41.6574 C
+I (260058) DEVICE_MANAGER_TASK: Device manager tick: updated device temp_sensor (ID: 4)
+I (260148) HEATER_CTRL: Toggling Heater to state: OFF
+I (260158) DEVICE_MANAGER_TASK: Device manager tick complete, posting update event and heartbeat
+I (260158) TEMP_PROCESSOR_EVENTS: Device manager updated event received
+I (260168) TEMP_PROCESSOR: Temperature samples range: 38.17°C - 42.17°C
+I (260168) TEMP_PROCESSOR_TASK: Processed average temperature: 39.99 C
+I (260458) MS9024: CDAB decode: raw=0x4218F6E8 → 38.2411 C
+I (260458) DEVICE_MANAGER_TASK: Device manager tick: updated device temp_sensor (ID: 0)
+I (260508) nextion_rx: Nextion RX idle: bytes=60 lines=3 active=[file:0 storage:0]
+I (260508) COORDINATOR_TASK: Elapsed: 160000 ms, Stage: 0, Phase: 0, Setpoint: 36.55 C
+I (260508) PID_COMPONENT: PID - SP: 36.55, PV: 39.99, err: -3.44, dt: 1.000s, dyn_max: 1.00, P: -1.032, I: 0.455, D: -0.002, Out: 0.000
+I (260618) MS9024: CDAB decode: raw=0x421FC707 → 39.9444 C
+I (260618) DEVICE_MANAGER_TASK: Device manager tick: updated device temp_sensor (ID: 1)
+I (260768) MS9024: CDAB decode: raw=0x4228A81B → 42.1642 C
+I (260768) DEVICE_MANAGER_TASK: Device manager tick: updated device temp_sensor (ID: 2)
+I (260918) MS9024: CDAB decode: raw=0x421890C0 → 38.1414 C
+I (260918) DEVICE_MANAGER_TASK: Device manager tick: updated device temp_sensor (ID: 3)
+I (261058) MS9024: CDAB decode: raw=0x42277ED8 → 41.8739 C
+I (261058) DEVICE_MANAGER_TASK: Device manager tick: updated device temp_sensor (ID: 4)
+I (261158) DEVICE_MANAGER_TASK: Device manager tick complete, posting update event and heartbeat
+I (261158) TEMP_PROCESSOR_EVENTS: Device manager updated event received
+I (261168) TEMP_PROCESSOR: Temperature samples range: 38.14°C - 42.16°C
+I (261168) TEMP_PROCESSOR_TASK: Processed average temperature: 40.07 C
+I (261458) MS9024: CDAB decode: raw=0x4218F751 → 38.2415 C
+I (261458) DEVICE_MANAGER_TASK: Device manager tick: updated device temp_sensor (ID: 0)
+I (261508) COORDINATOR_TASK: Elapsed: 161000 ms, Stage: 0, Phase: 0, Setpoint: 36.60 C
+I (261508) PID_COMPONENT: PID - SP: 36.60, PV: 40.07, err: -3.47, dt: 1.000s, dyn_max: 1.00, P: -1.042, I: 0.455, D: -0.002, Out: 0.000
+I (261618) MS9024: CDAB decode: raw=0x421FF8C0 → 39.9929 C
+I (261618) DEVICE_MANAGER_TASK: Device manager tick: updated device temp_sensor (ID: 1)
+I (261758) MS9024: CDAB decode: raw=0x422854CC → 42.0828 C
+I (261758) DEVICE_MANAGER_TASK: Device manager tick: updated device temp_sensor (ID: 2)
+I (261898) MS9024: CDAB decode: raw=0x421976DA → 38.3661 C
+I (261898) DEVICE_MANAGER_TASK: Device manager tick: updated device temp_sensor (ID: 3)
+I (262038) MS9024: CDAB decode: raw=0x4228114C → 42.0169 C
+I (262038) DEVICE_MANAGER_TASK: Device manager tick: updated device temp_sensor (ID: 4)
+I (262138) DEVICE_MANAGER_TASK: Device manager tick complete, posting update event and heartbeat
+I (262138) TEMP_PROCESSOR_EVENTS: Device manager updated event received
+I (262148) TEMP_PROCESSOR: Temperature samples range: 38.24°C - 42.08°C
+I (262148) TEMP_PROCESSOR_TASK: Processed average temperature: 40.14 C
+I (262468) MS9024: CDAB decode: raw=0x42196B60 → 38.3549 C
+I (262468) DEVICE_MANAGER_TASK: Device manager tick: updated device temp_sensor (ID: 0)
+I (262508) COORDINATOR_TASK: Elapsed: 162000 ms, Stage: 0, Phase: 0, Setpoint: 36.64 C
+I (262508) PID_COMPONENT: PID - SP: 36.64, PV: 40.14, err: -3.50, dt: 1.000s, dyn_max: 1.00, P: -1.049, I: 0.455, D: -0.001, Out: 0.000
+I (262618) MS9024: CDAB decode: raw=0x421F9A70 → 39.9008 C
+I (262618) DEVICE_MANAGER_TASK: Device manager tick: updated device temp_sensor (ID: 1)
+I (262768) MS9024: CDAB decode: raw=0x4228AA14 → 42.1661 C
+I (262768) DEVICE_MANAGER_TASK: Device manager tick: updated device temp_sensor (ID: 2)
+I (262928) MS9024: CDAB decode: raw=0x4218DA0F → 38.2129 C
+I (262938) DEVICE_MANAGER_TASK: Device manager tick: updated device temp_sensor (ID: 3)
+I (263068) MS9024: CDAB decode: raw=0x4227BA3C → 41.9319 C
+I (263078) DEVICE_MANAGER_TASK: Device manager tick: updated device temp_sensor (ID: 4)
+I (263168) DEVICE_MANAGER_TASK: Device manager tick complete, posting update event and heartbeat
+I (263168) TEMP_PROCESSOR_EVENTS: Device manager updated event received
+I (263178) TEMP_PROCESSOR: Temperature samples range: 38.21°C - 42.17°C
+I (263178) TEMP_PROCESSOR_TASK: Processed average temperature: 40.11 C
+I (263468) MS9024: CDAB decode: raw=0x421995F6 → 38.3964 C
+I (263468) DEVICE_MANAGER_TASK: Device manager tick: updated device temp_sensor (ID: 0)
+I (263508) COORDINATOR_TASK: Elapsed: 163000 ms, Stage: 0, Phase: 0, Setpoint: 36.69 C
+I (263508) PID_COMPONENT: PID - SP: 36.69, PV: 40.11, err: -3.43, dt: 1.000s, dyn_max: 1.00, P: -1.028, I: 0.456, D: 0.001, Out: 0.000
+I (263628) MS9024: CDAB decode: raw=0x421FDD01 → 39.9658 C
+I (263628) DEVICE_MANAGER_TASK: Device manager tick: updated device temp_sensor (ID: 1)
+I (263778) MS9024: CDAB decode: raw=0x4228CC4E → 42.1995 C
+I (263778) DEVICE_MANAGER_TASK: Device manager tick: updated device temp_sensor (ID: 2)
+I (263928) MS9024: CDAB decode: raw=0x42191F69 → 38.2807 C
+I (263928) DEVICE_MANAGER_TASK: Device manager tick: updated device temp_sensor (ID: 3)
+I (264088) MS9024: CDAB decode: raw=0x4226C070 → 41.6879 C
+I (264098) DEVICE_MANAGER_TASK: Device manager tick: updated device temp_sensor (ID: 4)
+I (264188) DEVICE_MANAGER_TASK: Device manager tick complete, posting update event and heartbeat
+I (264188) TEMP_PROCESSOR_EVENTS: Device manager updated event received
+I (264198) TEMP_PROCESSOR: Temperature samples range: 38.28°C - 42.20°C
+I (264198) TEMP_PROCESSOR_TASK: Processed average temperature: 40.11 C
+I (264458) MS9024: CDAB decode: raw=0x421A4B58 → 38.5736 C
+I (264468) DEVICE_MANAGER_TASK: Device manager tick: updated device temp_sensor (ID: 0)
+I (264508) COORDINATOR_TASK: Elapsed: 164000 ms, Stage: 0, Phase: 0, Setpoint: 36.73 C
+I (264508) PID_COMPONENT: PID - SP: 36.73, PV: 40.11, err: -3.37, dt: 1.000s, dyn_max: 1.00, P: -1.012, I: 0.456, D: 0.000, Out: 0.000
+I (264598) MS9024: CDAB decode: raw=0x42208791 → 40.1324 C
+I (264598) DEVICE_MANAGER_TASK: Device manager tick: updated device temp_sensor (ID: 1)
+I (264758) MS9024: CDAB decode: raw=0x42286C1E → 42.1056 C
+I (264758) DEVICE_MANAGER_TASK: Device manager tick: updated device temp_sensor (ID: 2)
+I (264918) MS9024: CDAB decode: raw=0x42197682 → 38.3657 C
+I (264918) DEVICE_MANAGER_TASK: Device manager tick: updated device temp_sensor (ID: 3)
+I (265058) MS9024: CDAB decode: raw=0x422794DA → 41.8954 C
+I (265058) DEVICE_MANAGER_TASK: Device manager tick: updated device temp_sensor (ID: 4)
+I (265148) HEATER_CTRL: Toggling Heater to state: OFF
+I (265158) DEVICE_MANAGER_TASK: Device manager tick complete, posting update event and heartbeat
+I (265158) TEMP_PROCESSOR_EVENTS: Device manager updated event received
+I (265168) TEMP_PROCESSOR: Temperature samples range: 38.37°C - 42.11°C
+I (265168) TEMP_PROCESSOR_TASK: Processed average temperature: 40.21 C
+I (265458) MS9024: CDAB decode: raw=0x42198E88 → 38.3892 C
+I (265468) DEVICE_MANAGER_TASK: Device manager tick: updated device temp_sensor (ID: 0)
+I (265508) COORDINATOR_TASK: Elapsed: 165000 ms, Stage: 0, Phase: 0, Setpoint: 36.78 C
+I (265508) PID_COMPONENT: PID - SP: 36.78, PV: 40.21, err: -3.44, dt: 1.000s, dyn_max: 1.00, P: -1.031, I: 0.455, D: -0.002, Out: 0.000
+I (265618) MS9024: CDAB decode: raw=0x4220BF04 → 40.1865 C
+I (265618) DEVICE_MANAGER_TASK: Device manager tick: updated device temp_sensor (ID: 1)
+I (265768) MS9024: CDAB decode: raw=0x42287F9E → 42.1246 C
+I (265768) DEVICE_MANAGER_TASK: Device manager tick: updated device temp_sensor (ID: 2)
+I (265908) MS9024: CDAB decode: raw=0x42194EE8 → 38.3271 C
+I (265918) DEVICE_MANAGER_TASK: Device manager tick: updated device temp_sensor (ID: 3)
+I (266048) MS9024: CDAB decode: raw=0x42288168 → 42.1264 C
+I (266048) DEVICE_MANAGER_TASK: Device manager tick: updated device temp_sensor (ID: 4)
+I (266148) DEVICE_MANAGER_TASK: Device manager tick complete, posting update event and heartbeat
+I (266148) TEMP_PROCESSOR_EVENTS: Device manager updated event received
+I (266158) TEMP_PROCESSOR: Temperature samples range: 38.33°C - 42.13°C
+I (266158) TEMP_PROCESSOR_TASK: Processed average temperature: 40.23 C
+I (266468) MS9024: CDAB decode: raw=0x421A1AD5 → 38.5262 C
+I (266468) DEVICE_MANAGER_TASK: Device manager tick: updated device temp_sensor (ID: 0)
+I (266508) COORDINATOR_TASK: Elapsed: 166000 ms, Stage: 0, Phase: 0, Setpoint: 36.82 C
+I (266508) PID_COMPONENT: PID - SP: 36.82, PV: 40.23, err: -3.41, dt: 1.000s, dyn_max: 1.00, P: -1.023, I: 0.456, D: -0.000, Out: 0.000
+I (266608) MS9024: CDAB decode: raw=0x422068C0 → 40.1023 C
+I (266618) DEVICE_MANAGER_TASK: Device manager tick: updated device temp_sensor (ID: 1)
+I (266748) MS9024: CDAB decode: raw=0x422937FF → 42.3047 C
+I (266758) DEVICE_MANAGER_TASK: Device manager tick: updated device temp_sensor (ID: 2)
+I (266888) MS9024: CDAB decode: raw=0x42199C45 → 38.4026 C
+I (266898) DEVICE_MANAGER_TASK: Device manager tick: updated device temp_sensor (ID: 3)
+I (267028) MS9024: CDAB decode: raw=0x42273425 → 41.8009 C
+I (267028) DEVICE_MANAGER_TASK: Device manager tick: updated device temp_sensor (ID: 4)
+I (267128) DEVICE_MANAGER_TASK: Device manager tick complete, posting update event and heartbeat
+I (267128) TEMP_PROCESSOR_EVENTS: Device manager updated event received
+I (267138) TEMP_PROCESSOR: Temperature samples range: 38.40°C - 42.30°C
+I (267138) TEMP_PROCESSOR_TASK: Processed average temperature: 40.23 C
+I (267458) MS9024: CDAB decode: raw=0x4219FC1E → 38.4962 C
+I (267468) DEVICE_MANAGER_TASK: Device manager tick: updated device temp_sensor (ID: 0)
+I (267508) COORDINATOR_TASK: Elapsed: 167000 ms, Stage: 0, Phase: 0, Setpoint: 36.86 C
+I (267508) PID_COMPONENT: PID - SP: 36.86, PV: 40.23, err: -3.36, dt: 1.000s, dyn_max: 1.00, P: -1.009, I: 0.456, D: 0.000, Out: 0.000
+I (267598) MS9024: CDAB decode: raw=0x422056B2 → 40.0847 C
+I (267598) DEVICE_MANAGER_TASK: Device manager tick: updated device temp_sensor (ID: 1)
+I (267748) MS9024: CDAB decode: raw=0x42294F1C → 42.3273 C
+I (267748) DEVICE_MANAGER_TASK: Device manager tick: updated device temp_sensor (ID: 2)
+I (267888) MS9024: CDAB decode: raw=0x4219A9A0 → 38.4156 C
+I (267888) DEVICE_MANAGER_TASK: Device manager tick: updated device temp_sensor (ID: 3)
+I (268038) MS9024: CDAB decode: raw=0x4227878A → 41.8824 C
+I (268038) DEVICE_MANAGER_TASK: Device manager tick: updated device temp_sensor (ID: 4)
+I (268138) DEVICE_MANAGER_TASK: Device manager tick complete, posting update event and heartbeat
+I (268138) TEMP_PROCESSOR_EVENTS: Device manager updated event received
+I (268148) TEMP_PROCESSOR: Temperature samples range: 38.42°C - 42.33°C
+I (268148) TEMP_PROCESSOR_TASK: Processed average temperature: 40.24 C
+I (268478) MS9024: CDAB decode: raw=0x421A733F → 38.6125 C
+I (268488) DEVICE_MANAGER_TASK: Device manager tick: updated device temp_sensor (ID: 0)
+I (268508) COORDINATOR_TASK: Elapsed: 168000 ms, Stage: 0, Phase: 0, Setpoint: 36.91 C
+I (268508) PID_COMPONENT: PID - SP: 36.91, PV: 40.24, err: -3.33, dt: 1.000s, dyn_max: 1.00, P: -1.000, I: 0.457, D: -0.000, Out: 0.000
+I (268628) MS9024: CDAB decode: raw=0x4220CC38 → 40.1994 C
+I (268628) DEVICE_MANAGER_TASK: Device manager tick: updated device temp_sensor (ID: 1)
+I (268768) MS9024: CDAB decode: raw=0x42298C2E → 42.3869 C
+I (268778) DEVICE_MANAGER_TASK: Device manager tick: updated device temp_sensor (ID: 2)
+I (268918) MS9024: CDAB decode: raw=0x4219C0A8 → 38.4381 C
+I (268918) DEVICE_MANAGER_TASK: Device manager tick: updated device temp_sensor (ID: 3)
+I (269088) MS9024: CDAB decode: raw=0x4227D57E → 41.9585 C
+I (269088) DEVICE_MANAGER_TASK: Device manager tick: updated device temp_sensor (ID: 4)
+I (269188) DEVICE_MANAGER_TASK: Device manager tick complete, posting update event and heartbeat
+I (269188) TEMP_PROCESSOR_EVENTS: Device manager updated event received
+I (269198) TEMP_PROCESSOR: Temperature samples range: 38.44°C - 42.39°C
+I (269198) TEMP_PROCESSOR_TASK: Processed average temperature: 40.32 C
+I (269478) MS9024: CDAB decode: raw=0x421A6F62 → 38.6088 C
+I (269478) DEVICE_MANAGER_TASK: Device manager tick: updated device temp_sensor (ID: 0)
+I (269508) COORDINATOR_TASK: Elapsed: 169000 ms, Stage: 0, Phase: 0, Setpoint: 36.95 C
+I (269508) PID_COMPONENT: PID - SP: 36.95, PV: 40.32, err: -3.37, dt: 1.000s, dyn_max: 1.00, P: -1.010, I: 0.456, D: -0.002, Out: 0.000
+I (269628) MS9024: CDAB decode: raw=0x42205AFE → 40.0889 C
+I (269628) DEVICE_MANAGER_TASK: Device manager tick: updated device temp_sensor (ID: 1)
+I (269768) MS9024: CDAB decode: raw=0x4229CA42 → 42.4475 C
+I (269778) DEVICE_MANAGER_TASK: Device manager tick: updated device temp_sensor (ID: 2)
+I (269918) MS9024: CDAB decode: raw=0x42199288 → 38.3931 C
+I (269918) DEVICE_MANAGER_TASK: Device manager tick: updated device temp_sensor (ID: 3)
+I (270078) MS9024: CDAB decode: raw=0x42274EF4 → 41.8271 C
+I (270078) DEVICE_MANAGER_TASK: Device manager tick: updated device temp_sensor (ID: 4)
+I (270148) HEATER_CTRL: Toggling Heater to state: OFF
+I (270178) DEVICE_MANAGER_TASK: Device manager tick complete, posting update event and heartbeat
+I (270178) TEMP_PROCESSOR_EVENTS: Device manager updated event received
+I (270188) TEMP_PROCESSOR: Temperature samples range: 38.39°C - 42.45°C
+I (270188) TEMP_PROCESSOR_TASK: Processed average temperature: 40.27 C
+I (270458) MS9024: CDAB decode: raw=0x4219F625 → 38.4904 C
+I (270458) DEVICE_MANAGER_TASK: Device manager tick: updated device temp_sensor (ID: 0)
+I (270508) COORDINATOR_TASK: Elapsed: 170000 ms, Stage: 0, Phase: 0, Setpoint: 37.00 C
+I (270508) PID_COMPONENT: PID - SP: 37.00, PV: 40.27, err: -3.28, dt: 1.000s, dyn_max: 1.00, P: -0.983, I: 0.457, D: 0.001, Out: 0.000
+I (270608) MS9024: CDAB decode: raw=0x4220B5E9 → 40.1776 C
+I (270608) DEVICE_MANAGER_TASK: Device manager tick: updated device temp_sensor (ID: 1)
+I (270748) MS9024: CDAB decode: raw=0x422A1528 → 42.5207 C
+I (270748) DEVICE_MANAGER_TASK: Device manager tick: updated device temp_sensor (ID: 2)
+I (270898) MS9024: CDAB decode: raw=0x421A346A → 38.5512 C
+I (270898) DEVICE_MANAGER_TASK: Device manager tick: updated device temp_sensor (ID: 3)
+I (271038) MS9024: CDAB decode: raw=0x42281BF2 → 42.0273 C
+I (271038) DEVICE_MANAGER_TASK: Device manager tick: updated device temp_sensor (ID: 4)
+I (271138) DEVICE_MANAGER_TASK: Device manager tick complete, posting update event and heartbeat
+I (271138) TEMP_PROCESSOR_EVENTS: Device manager updated event received
+I (271148) TEMP_PROCESSOR: Temperature samples range: 38.49°C - 42.52°C
+I (271148) TEMP_PROCESSOR_TASK: Processed average temperature: 40.35 C
+I (271458) MS9024: CDAB decode: raw=0x421A54E8 → 38.5829 C
+I (271458) DEVICE_MANAGER_TASK: Device manager tick: updated device temp_sensor (ID: 0)
+I (271508) COORDINATOR_TASK: Elapsed: 171000 ms, Stage: 0, Phase: 0, Setpoint: 37.04 C
+I (271508) PID_COMPONENT: PID - SP: 37.04, PV: 40.35, err: -3.31, dt: 1.000s, dyn_max: 1.00, P: -0.993, I: 0.457, D: -0.002, Out: 0.000
+I (271608) MS9024: CDAB decode: raw=0x4221870E → 40.3819 C
+I (271608) DEVICE_MANAGER_TASK: Device manager tick: updated device temp_sensor (ID: 1)
+I (271748) MS9024: CDAB decode: raw=0x422A458E → 42.5679 C
+I (271758) DEVICE_MANAGER_TASK: Device manager tick: updated device temp_sensor (ID: 2)
+I (271898) MS9024: CDAB decode: raw=0x421A3E3B → 38.5608 C
+I (271898) DEVICE_MANAGER_TASK: Device manager tick: updated device temp_sensor (ID: 3)
+I (272038) MS9024: CDAB decode: raw=0x42285046 → 42.0784 C
+I (272038) DEVICE_MANAGER_TASK: Device manager tick: updated device temp_sensor (ID: 4)
+I (272138) DEVICE_MANAGER_TASK: Device manager tick complete, posting update event and heartbeat
+I (272138) TEMP_PROCESSOR_EVENTS: Device manager updated event received
+I (272148) TEMP_PROCESSOR: Temperature samples range: 38.56°C - 42.57°C
+I (272148) TEMP_PROCESSOR_TASK: Processed average temperature: 40.43 C
+I (272458) MS9024: CDAB decode: raw=0x421A8ADC → 38.6356 C
+I (272458) DEVICE_MANAGER_TASK: Device manager tick: updated device temp_sensor (ID: 0)
+I (272508) COORDINATOR_TASK: Elapsed: 172000 ms, Stage: 0, Phase: 0, Setpoint: 37.09 C
+I (272508) PID_COMPONENT: PID - SP: 37.09, PV: 40.43, err: -3.35, dt: 1.000s, dyn_max: 1.00, P: -1.004, I: 0.456, D: -0.002, Out: 0.000
+I (272598) MS9024: CDAB decode: raw=0x42214208 → 40.3145 C
+I (272598) DEVICE_MANAGER_TASK: Device manager tick: updated device temp_sensor (ID: 1)
+I (272748) MS9024: CDAB decode: raw=0x4229FDB6 → 42.4978 C
+I (272748) DEVICE_MANAGER_TASK: Device manager tick: updated device temp_sensor (ID: 2)
+I (272918) MS9024: CDAB decode: raw=0x421A6FDC → 38.6092 C
+I (272918) DEVICE_MANAGER_TASK: Device manager tick: updated device temp_sensor (ID: 3)
+I (273078) MS9024: CDAB decode: raw=0x4229F762 → 42.4916 C
+I (273078) DEVICE_MANAGER_TASK: Device manager tick: updated device temp_sensor (ID: 4)
+I (273178) DEVICE_MANAGER_TASK: Device manager tick complete, posting update event and heartbeat
+I (273178) TEMP_PROCESSOR_EVENTS: Device manager updated event received
+I (273188) TEMP_PROCESSOR: Temperature samples range: 38.61°C - 42.50°C
+I (273188) TEMP_PROCESSOR_TASK: Processed average temperature: 40.51 C
+I (273478) MS9024: CDAB decode: raw=0x421B4C20 → 38.8243 C
+I (273478) DEVICE_MANAGER_TASK: Device manager tick: updated device temp_sensor (ID: 0)
+I (273508) COORDINATOR_TASK: Elapsed: 173000 ms, Stage: 0, Phase: 0, Setpoint: 37.13 C
+I (273508) PID_COMPONENT: PID - SP: 37.13, PV: 40.51, err: -3.38, dt: 1.000s, dyn_max: 1.00, P: -1.014, I: 0.456, D: -0.002, Out: 0.000
+I (273628) MS9024: CDAB decode: raw=0x4220E546 → 40.2239 C
+I (273628) DEVICE_MANAGER_TASK: Device manager tick: updated device temp_sensor (ID: 1)
+I (273768) MS9024: CDAB decode: raw=0x422A7517 → 42.6143 C
+I (273768) DEVICE_MANAGER_TASK: Device manager tick: updated device temp_sensor (ID: 2)
+I (273918) MS9024: CDAB decode: raw=0x421A7DB8 → 38.6228 C
+I (273918) DEVICE_MANAGER_TASK: Device manager tick: updated device temp_sensor (ID: 3)
+I (274078) MS9024: CDAB decode: raw=0x422980AD → 42.3757 C
+I (274078) DEVICE_MANAGER_TASK: Device manager tick: updated device temp_sensor (ID: 4)
+I (274178) DEVICE_MANAGER_TASK: Device manager tick complete, posting update event and heartbeat
+I (274178) TEMP_PROCESSOR_EVENTS: Device manager updated event received
+I (274188) TEMP_PROCESSOR: Temperature samples range: 38.62°C - 42.61°C
+I (274188) TEMP_PROCESSOR_TASK: Processed average temperature: 40.53 C
+I (274478) MS9024: CDAB decode: raw=0x421B77EE → 38.8671 C
+I (274478) DEVICE_MANAGER_TASK: Device manager tick: updated device temp_sensor (ID: 0)
+I (274508) COORDINATOR_TASK: Elapsed: 174000 ms, Stage: 0, Phase: 0, Setpoint: 37.18 C
+I (274508) PID_COMPONENT: PID - SP: 37.18, PV: 40.53, err: -3.36, dt: 1.000s, dyn_max: 1.00, P: -1.007, I: 0.456, D: -0.000, Out: 0.000
+I (274618) MS9024: CDAB decode: raw=0x42209BB5 → 40.1521 C
+I (274618) DEVICE_MANAGER_TASK: Device manager tick: updated device temp_sensor (ID: 1)
+I (274768) MS9024: CDAB decode: raw=0x422A51DF → 42.5800 C
+I (274768) DEVICE_MANAGER_TASK: Device manager tick: updated device temp_sensor (ID: 2)
+I (274918) MS9024: CDAB decode: raw=0x421A4470 → 38.5668 C
+I (274918) DEVICE_MANAGER_TASK: Device manager tick: updated device temp_sensor (ID: 3)
+I (275068) MS9024: CDAB decode: raw=0x4227F45E → 41.9886 C
+I (275068) DEVICE_MANAGER_TASK: Device manager tick: updated device temp_sensor (ID: 4)
+I (275148) HEATER_CTRL: Toggling Heater to state: OFF
+I (275168) DEVICE_MANAGER_TASK: Device manager tick complete, posting update event and heartbeat
+I (275168) TEMP_PROCESSOR_EVENTS: Device manager updated event received
+I (275178) TEMP_PROCESSOR: Temperature samples range: 38.57°C - 42.58°C
+I (275178) TEMP_PROCESSOR_TASK: Processed average temperature: 40.43 C
+I (275468) MS9024: CDAB decode: raw=0x421AEEC2 → 38.7332 C
+I (275468) DEVICE_MANAGER_TASK: Device manager tick: updated device temp_sensor (ID: 0)
+I (275508) COORDINATOR_TASK: Elapsed: 175000 ms, Stage: 0, Phase: 0, Setpoint: 37.22 C
+I (275508) PID_COMPONENT: PID - SP: 37.22, PV: 40.43, err: -3.21, dt: 1.000s, dyn_max: 1.00, P: -0.963, I: 0.458, D: 0.002, Out: 0.000
+I (275618) MS9024: CDAB decode: raw=0x422102CA → 40.2527 C
+I (275618) DEVICE_MANAGER_TASK: Device manager tick: updated device temp_sensor (ID: 1)
+I (275758) MS9024: CDAB decode: raw=0x4229C039 → 42.4377 C
+I (275768) DEVICE_MANAGER_TASK: Device manager tick: updated device temp_sensor (ID: 2)
+I (275898) MS9024: CDAB decode: raw=0x421A6D4A → 38.6067 C
+I (275898) DEVICE_MANAGER_TASK: Device manager tick: updated device temp_sensor (ID: 3)
+I (276038) MS9024: CDAB decode: raw=0x4229A6C8 → 42.4129 C
+I (276038) DEVICE_MANAGER_TASK: Device manager tick: updated device temp_sensor (ID: 4)
+I (276138) DEVICE_MANAGER_TASK: Device manager tick complete, posting update event and heartbeat
+I (276138) TEMP_PROCESSOR_EVENTS: Device manager updated event received
+I (276148) TEMP_PROCESSOR: Temperature samples range: 38.61°C - 42.44°C
+I (276148) TEMP_PROCESSOR_TASK: Processed average temperature: 40.49 C
+I (276468) MS9024: CDAB decode: raw=0x421AE17E → 38.7202 C
+I (276468) DEVICE_MANAGER_TASK: Device manager tick: updated device temp_sensor (ID: 0)
+I (276508) COORDINATOR_TASK: Elapsed: 176000 ms, Stage: 0, Phase: 0, Setpoint: 37.26 C
+I (276508) PID_COMPONENT: PID - SP: 37.26, PV: 40.49, err: -3.22, dt: 1.000s, dyn_max: 1.00, P: -0.967, I: 0.458, D: -0.001, Out: 0.000
+I (276618) MS9024: CDAB decode: raw=0x4221FE59 → 40.4984 C
+I (276618) DEVICE_MANAGER_TASK: Device manager tick: updated device temp_sensor (ID: 1)
+I (276768) MS9024: CDAB decode: raw=0x422A4287 → 42.5650 C
+I (276768) DEVICE_MANAGER_TASK: Device manager tick: updated device temp_sensor (ID: 2)
+I (276918) MS9024: CDAB decode: raw=0x421A5D7F → 38.5913 C
+I (276918) DEVICE_MANAGER_TASK: Device manager tick: updated device temp_sensor (ID: 3)
+I (277068) MS9024: CDAB decode: raw=0x422A24F4 → 42.5361 C
+I (277068) DEVICE_MANAGER_TASK: Device manager tick: updated device temp_sensor (ID: 4)
+I (277168) DEVICE_MANAGER_TASK: Device manager tick complete, posting update event and heartbeat
+I (277168) TEMP_PROCESSOR_EVENTS: Device manager updated event received
+I (277178) TEMP_PROCESSOR: Temperature samples range: 38.59°C - 42.56°C
+I (277178) TEMP_PROCESSOR_TASK: Processed average temperature: 40.58 C
+I (277478) MS9024: CDAB decode: raw=0x421B2012 → 38.7813 C
+I (277478) DEVICE_MANAGER_TASK: Device manager tick: updated device temp_sensor (ID: 0)
+I (277508) COORDINATOR_TASK: Elapsed: 177000 ms, Stage: 0, Phase: 0, Setpoint: 37.31 C
+I (277508) PID_COMPONENT: PID - SP: 37.31, PV: 40.58, err: -3.27, dt: 1.000s, dyn_max: 1.00, P: -0.982, I: 0.457, D: -0.002, Out: 0.000
+I (277628) MS9024: CDAB decode: raw=0x42219997 → 40.4000 C
+I (277628) DEVICE_MANAGER_TASK: Device manager tick: updated device temp_sensor (ID: 1)
+I (277768) MS9024: CDAB decode: raw=0x4229C6BC → 42.4441 C
+I (277768) DEVICE_MANAGER_TASK: Device manager tick: updated device temp_sensor (ID: 2)
+I (277918) MS9024: CDAB decode: raw=0x421B1122 → 38.7667 C
+I (277918) DEVICE_MANAGER_TASK: Device manager tick: updated device temp_sensor (ID: 3)
+I (278078) MS9024: CDAB decode: raw=0x422950B0 → 42.3288 C
+I (278078) DEVICE_MANAGER_TASK: Device manager tick: updated device temp_sensor (ID: 4)
+I (278178) DEVICE_MANAGER_TASK: Device manager tick complete, posting update event and heartbeat
+I (278178) TEMP_PROCESSOR_EVENTS: Device manager updated event received
+I (278188) TEMP_PROCESSOR: Temperature samples range: 38.77°C - 42.44°C
+I (278188) TEMP_PROCESSOR_TASK: Processed average temperature: 40.54 C
+I (278468) MS9024: CDAB decode: raw=0x421B672A → 38.8507 C
+I (278468) DEVICE_MANAGER_TASK: Device manager tick: updated device temp_sensor (ID: 0)
+I (278508) COORDINATOR_TASK: Elapsed: 178000 ms, Stage: 0, Phase: 0, Setpoint: 37.35 C
+I (278508) PID_COMPONENT: PID - SP: 37.35, PV: 40.54, err: -3.19, dt: 1.000s, dyn_max: 1.00, P: -0.957, I: 0.458, D: 0.001, Out: 0.000
+I (278608) MS9024: CDAB decode: raw=0x4221553A → 40.3332 C
+I (278608) DEVICE_MANAGER_TASK: Device manager tick: updated device temp_sensor (ID: 1)
+I (278758) MS9024: CDAB decode: raw=0x422A70F0 → 42.6103 C
+I (278758) DEVICE_MANAGER_TASK: Device manager tick: updated device temp_sensor (ID: 2)
+I (278898) MS9024: CDAB decode: raw=0x421AD01C → 38.7032 C
+I (278908) DEVICE_MANAGER_TASK: Device manager tick: updated device temp_sensor (ID: 3)
+I (279058) MS9024: CDAB decode: raw=0x4229195E → 42.2748 C
+I (279068) DEVICE_MANAGER_TASK: Device manager tick: updated device temp_sensor (ID: 4)
+I (279158) DEVICE_MANAGER_TASK: Device manager tick complete, posting update event and heartbeat
+I (279158) TEMP_PROCESSOR_EVENTS: Device manager updated event received
+I (279168) TEMP_PROCESSOR: Temperature samples range: 38.70°C - 42.61°C
+I (279168) TEMP_PROCESSOR_TASK: Processed average temperature: 40.55 C
+I (279468) MS9024: CDAB decode: raw=0x421B26B2 → 38.7878 C
+I (279468) DEVICE_MANAGER_TASK: Device manager tick: updated device temp_sensor (ID: 0)
+I (279508) COORDINATOR_TASK: Elapsed: 179000 ms, Stage: 0, Phase: 0, Setpoint: 37.40 C
+I (279508) PID_COMPONENT: PID - SP: 37.40, PV: 40.55, err: -3.16, dt: 1.000s, dyn_max: 1.00, P: -0.947, I: 0.458, D: -0.000, Out: 0.000
+I (279608) MS9024: CDAB decode: raw=0x4221FBFA → 40.4961 C
+I (279608) DEVICE_MANAGER_TASK: Device manager tick: updated device temp_sensor (ID: 1)
+I (279758) MS9024: CDAB decode: raw=0x422A9D7A → 42.6538 C
+I (279758) DEVICE_MANAGER_TASK: Device manager tick: updated device temp_sensor (ID: 2)
+I (279888) MS9024: CDAB decode: raw=0x421B27C6 → 38.7888 C
+I (279898) DEVICE_MANAGER_TASK: Device manager tick: updated device temp_sensor (ID: 3)
+I (280028) MS9024: CDAB decode: raw=0x42296738 → 42.3508 C
+I (280028) DEVICE_MANAGER_TASK: Device manager tick: updated device temp_sensor (ID: 4)
+I (280128) DEVICE_MANAGER_TASK: Device manager tick complete, posting update event and heartbeat
+I (280128) TEMP_PROCESSOR_EVENTS: Device manager updated event received
+I (280138) TEMP_PROCESSOR: Temperature samples range: 38.79°C - 42.65°C
+I (280138) TEMP_PROCESSOR_TASK: Processed average temperature: 40.62 C
+I (280148) HEATER_CTRL: Toggling Heater to state: OFF
+I (280458) MS9024: CDAB decode: raw=0x421BD012 → 38.9532 C
+I (280468) DEVICE_MANAGER_TASK: Device manager tick: updated device temp_sensor (ID: 0)
+I (280508) nextion_rx: Nextion RX idle: bytes=60 lines=3 active=[file:0 storage:0]
+I (280508) COORDINATOR_TASK: Elapsed: 180000 ms, Stage: 0, Phase: 0, Setpoint: 37.44 C
+I (280508) PID_COMPONENT: PID - SP: 37.44, PV: 40.62, err: -3.17, dt: 1.000s, dyn_max: 1.00, P: -0.952, I: 0.458, D: -0.001, Out: 0.000
+I (280608) MS9024: CDAB decode: raw=0x4221EAE4 → 40.4794 C
+I (280608) DEVICE_MANAGER_TASK: Device manager tick: updated device temp_sensor (ID: 1)
+I (280748) MS9024: CDAB decode: raw=0x422A4BF8 → 42.5742 C
+I (280758) DEVICE_MANAGER_TASK: Device manager tick: updated device temp_sensor (ID: 2)
+I (280888) MS9024: CDAB decode: raw=0x421ADD3E → 38.7161 C
+I (280888) DEVICE_MANAGER_TASK: Device manager tick: updated device temp_sensor (ID: 3)
+I (281028) MS9024: CDAB decode: raw=0x422866B4 → 42.1003 C
+I (281028) DEVICE_MANAGER_TASK: Device manager tick: updated device temp_sensor (ID: 4)
+I (281128) DEVICE_MANAGER_TASK: Device manager tick complete, posting update event and heartbeat
+I (281128) TEMP_PROCESSOR_EVENTS: Device manager updated event received
+I (281138) TEMP_PROCESSOR: Temperature samples range: 38.72°C - 42.57°C
+I (281138) TEMP_PROCESSOR_TASK: Processed average temperature: 40.56 C
+I (281468) MS9024: CDAB decode: raw=0x421B9386 → 38.8941 C
+I (281468) DEVICE_MANAGER_TASK: Device manager tick: updated device temp_sensor (ID: 0)
+I (281508) COORDINATOR_TASK: Elapsed: 181000 ms, Stage: 0, Phase: 0, Setpoint: 37.49 C
+I (281508) PID_COMPONENT: PID - SP: 37.49, PV: 40.56, err: -3.08, dt: 1.000s, dyn_max: 1.00, P: -0.924, I: 0.459, D: 0.001, Out: 0.000
+I (281608) MS9024: CDAB decode: raw=0x42223B11 → 40.5577 C
+I (281608) DEVICE_MANAGER_TASK: Device manager tick: updated device temp_sensor (ID: 1)
+I (281758) MS9024: CDAB decode: raw=0x422AA449 → 42.6604 C
+I (281758) DEVICE_MANAGER_TASK: Device manager tick: updated device temp_sensor (ID: 2)
+I (281898) MS9024: CDAB decode: raw=0x421AFB28 → 38.7453 C
+I (281898) DEVICE_MANAGER_TASK: Device manager tick: updated device temp_sensor (ID: 3)
+I (282048) MS9024: CDAB decode: raw=0x422925D4 → 42.2869 C
+I (282048) DEVICE_MANAGER_TASK: Device manager tick: updated device temp_sensor (ID: 4)
+I (282148) DEVICE_MANAGER_TASK: Device manager tick complete, posting update event and heartbeat
+I (282148) TEMP_PROCESSOR_EVENTS: Device manager updated event received
+I (282158) TEMP_PROCESSOR: Temperature samples range: 38.75°C - 42.66°C
+I (282158) TEMP_PROCESSOR_TASK: Processed average temperature: 40.63 C
+I (282478) MS9024: CDAB decode: raw=0x421B5956 → 38.8372 C
+I (282478) DEVICE_MANAGER_TASK: Device manager tick: updated device temp_sensor (ID: 0)
+I (282508) COORDINATOR_TASK: Elapsed: 182000 ms, Stage: 0, Phase: 0, Setpoint: 37.53 C
+I (282508) PID_COMPONENT: PID - SP: 37.53, PV: 40.63, err: -3.10, dt: 1.000s, dyn_max: 1.00, P: -0.930, I: 0.459, D: -0.001, Out: 0.000
+I (282628) MS9024: CDAB decode: raw=0x4221D510 → 40.4581 C
+I (282628) DEVICE_MANAGER_TASK: Device manager tick: updated device temp_sensor (ID: 1)
+I (282788) MS9024: CDAB decode: raw=0x422ABA06 → 42.6817 C
+I (282798) DEVICE_MANAGER_TASK: Device manager tick: updated device temp_sensor (ID: 2)
+I (282948) MS9024: CDAB decode: raw=0x421B507E → 38.8286 C
+I (282948) DEVICE_MANAGER_TASK: Device manager tick: updated device temp_sensor (ID: 3)
+I (283108) MS9024: CDAB decode: raw=0x42286462 → 42.0980 C
+I (283108) DEVICE_MANAGER_TASK: Device manager tick: updated device temp_sensor (ID: 4)
+I (283208) DEVICE_MANAGER_TASK: Device manager tick complete, posting update event and heartbeat
+I (283208) TEMP_PROCESSOR_EVENTS: Device manager updated event received
+I (283218) TEMP_PROCESSOR: Temperature samples range: 38.83°C - 42.68°C
+I (283218) TEMP_PROCESSOR_TASK: Processed average temperature: 40.58 C
+I (283468) MS9024: CDAB decode: raw=0x421C27BC → 39.0388 C
+I (283468) DEVICE_MANAGER_TASK: Device manager tick: updated device temp_sensor (ID: 0)
+I (283508) COORDINATOR_TASK: Elapsed: 183000 ms, Stage: 0, Phase: 0, Setpoint: 37.57 C
+I (283508) PID_COMPONENT: PID - SP: 37.57, PV: 40.58, err: -3.01, dt: 1.000s, dyn_max: 1.00, P: -0.902, I: 0.460, D: 0.001, Out: 0.000
+I (283608) MS9024: CDAB decode: raw=0x42213002 → 40.2969 C
+I (283608) DEVICE_MANAGER_TASK: Device manager tick: updated device temp_sensor (ID: 1)
+I (283748) MS9024: CDAB decode: raw=0x4229EE2E → 42.4826 C
+I (283748) DEVICE_MANAGER_TASK: Device manager tick: updated device temp_sensor (ID: 2)
+I (283898) MS9024: CDAB decode: raw=0x421B8F28 → 38.8898 C
+I (283898) DEVICE_MANAGER_TASK: Device manager tick: updated device temp_sensor (ID: 3)
+I (284048) MS9024: CDAB decode: raw=0x42289FF1 → 42.1562 C
+I (284058) DEVICE_MANAGER_TASK: Device manager tick: updated device temp_sensor (ID: 4)
+I (284148) DEVICE_MANAGER_TASK: Device manager tick complete, posting update event and heartbeat
+I (284148) TEMP_PROCESSOR_EVENTS: Device manager updated event received
