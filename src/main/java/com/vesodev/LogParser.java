@@ -7,15 +7,15 @@ import java.util.regex.Pattern;
 public class LogParser {
     private static final Pattern ELAPSED_PATTERN = Pattern.compile("Elapsed:\\s*([0-9]+)\\s*ms");
     private static final Pattern STAGE_PHASE_PATTERN = Pattern.compile("Stage:\\s*([0-9]+),\\s*Phase:\\s*([0-9]+)");
-    private static final Pattern SETPOINT_PATTERN = Pattern.compile("Setpoint:\\s*([0-9]+\\.?[0-9]*)\\s*C");
+    private static final Pattern SETPOINT_PATTERN = Pattern.compile("Setpoint:\\s*([0-9]+\\.?[0-9]*)\\s*(?:°C|C)");
 
     private static final Pattern PID_PATTERN = Pattern.compile(
             "PID - .*SP:\\s*([0-9]+\\.?[0-9]*),\\s*PV:\\s*([0-9]+\\.?[0-9]*),\\s*err:\\s*([-+]?[0-9]+\\.?[0-9]*),\\s*dt:\\s*([0-9]+\\.?[0-9]*)s?,\\s*dyn_max:\\s*([0-9]+\\.?[0-9]*),\\s*P:\\s*([-+]?[0-9]+\\.?[0-9]*),\\s*I:\\s*([-+]?[0-9]+\\.?[0-9]*),\\s*D:\\s*([-+]?[0-9]+\\.?[0-9]*),\\s*Out:\\s*([-+]?[0-9]+\\.?[0-9]*)"
     );
 
-    private static final Pattern SAMPLE_RANGE_PATTERN = Pattern.compile("Temperature samples range:\\s*([0-9]+\\.?[0-9]*)°C\\s*-\\s*([0-9]+\\.?[0-9]*)°C");
-    private static final Pattern PROCESSED_AVG_PATTERN = Pattern.compile("Processed average temperature:\\s*([0-9]+\\.?[0-9]*)\\s*C");
-    private static final Pattern CDAB_PATTERN = Pattern.compile("CDAB decode:.*→\\s*([0-9]+\\.?[0-9]*)\\s*C");
+    private static final Pattern SAMPLE_RANGE_PATTERN = Pattern.compile("Temperature samples range:\\s*([0-9]+\\.?[0-9]*)\\s*(?:°C|C)\\s*-\\s*([0-9]+\\.?[0-9]*)\\s*(?:°C|C)");
+    private static final Pattern PROCESSED_AVG_PATTERN = Pattern.compile("Processed average temperature:\\s*([0-9]+\\.?[0-9]*)\\s*(?:°C|C)");
+    private static final Pattern CDAB_PATTERN = Pattern.compile("CDAB decode:.*→\\s*([0-9]+\\.?[0-9]*)\\s*(?:°C|C)");
     private static final Pattern SENSOR_ID_PATTERN = Pattern.compile("updated device temp_sensor.*ID:\\s*([0-9]+)\\)" );
 
     public static ParsedData parse(String line) {
