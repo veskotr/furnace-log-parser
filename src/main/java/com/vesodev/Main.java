@@ -155,10 +155,9 @@ public class Main {
         if (!monitor.isRunning()) {
             String cmdText = commandField.getText().trim();
             if (cmdText.isEmpty()) return;
-            String[] cmd = cmdText.split("\\s+");
             try {
                 String wd = workingDirField.getText().trim();
-                monitor.start(cmd, wd.isEmpty() ? null : wd, this::handleLine);
+                monitor.start(cmdText, wd.isEmpty() ? null : wd, this::handleLine);
                  startBtn.setText("Stop");
                  appendLog("Started: " + cmdText);
              } catch (Exception ex) {
