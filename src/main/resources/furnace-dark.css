@@ -1,0 +1,134 @@
+.root { -fx-background-color: #1e1e1e; }
+.button { -fx-padding: 8; -fx-font-size: 12; }
+.button:hover { -fx-background-color: #3d3d3d; }
+.check-box { -fx-text-fill: #ffffff; }
+.label { -fx-text-fill: #ffffff; }
+.list-view {
+    -fx-control-inner-background: #1e1e1e;
+    -fx-background-insets: 0;
+    -fx-padding: 5;
+}
+.list-cell {
+    -fx-background-color: #1e1e1e;
+    -fx-text-fill: #ffffff;
+}
+.list-cell:filled:selected {
+    -fx-background-color: #2f5f9f;
+    -fx-text-fill: #ffffff;
+}
+.chart {
+    -fx-background-color: #1e1e1e;
+    -fx-padding: 10;
+}
+.chart-plot-background {
+    -fx-background-color: #202020;
+}
+.chart-title, .axis-label {
+    -fx-text-fill: #ffffff;
+}
+.axis {
+    -fx-tick-label-fill: #d0d0d0;
+}
+.chart-legend {
+    -fx-background-color: #2b2b2b;
+}
+.annotation-label {
+    -fx-background-color: rgba(30,30,30,0.9);
+    -fx-background-radius: 4;
+    -fx-padding: 2 5 2 5;
+    -fx-font-size: 10;
+    -fx-text-fill: #ffffff;
+    -fx-border-color: #777777;
+    -fx-border-radius: 4;
+}
+.annotation-pid {
+    -fx-text-fill: #8be9fd;
+    -fx-border-color: #8be9fd;
+}
+.annotation-temp {
+    -fx-text-fill: #f1fa8c;
+    -fx-border-color: #f1fa8c;
+}
+
+.furnace-chart {
+    -fx-background-color: #161b22;
+}
+.furnace-chart .chart-title {
+    -fx-text-fill: #f0f6fc;
+}
+.furnace-chart .chart-legend {
+    -fx-background-color: rgba(22, 27, 34, 0.92);
+    -fx-border-color: #30363d;
+    -fx-border-width: 1;
+}
+.furnace-chart .chart-legend-item {
+    -fx-text-fill: #e6edf3;
+}
+.furnace-chart .axis .axis-label,
+.furnace-chart .axis .axis-tick-label {
+    -fx-fill: #c9d1d9;
+}
+.furnace-chart .axis .axis-major-tick-mark,
+.furnace-chart .axis .axis-minor-tick-mark {
+    -fx-stroke: #6e7681;
+}
+.furnace-chart .grid-renderer .chart-major-grid-lines {
+    -fx-stroke: rgba(148, 163, 184, 0.32);
+    -fx-stroke-width: 0.8;
+    -fx-stroke-dash-array: 5 4;
+    visibility: visible;
+}
+.furnace-chart .grid-renderer .chart-minor-grid-lines {
+    -fx-stroke: rgba(148, 163, 184, 0.18);
+    -fx-stroke-width: 0.5;
+    -fx-stroke-dash-array: 2 5;
+    visibility: hidden;
+}
+.furnace-chart .chart-datapoint-tooltip-label {
+    -fx-background-color: #0b2239;
+    -fx-border-color: #58a6ff;
+    -fx-border-radius: 4;
+    -fx-text-fill: #c9d1d9;
+    -fx-fill: #c9d1d9;
+    -fx-font-weight: bold;
+}
+.furnace-chart .chart-crosshair-path {
+    -fx-stroke: #c9d1d9;
+    -fx-stroke-width: 1.2;
+}
+.furnace-chart .chart-crosshair-label,
+.chart-crosshair-label,
+#crosshairIndicator-Label {
+    -fx-fill: #c9d1d9;
+    -fx-stroke: transparent;
+}
+.furnace-chart .value-indicator-marker,
+.furnace-chart .value-watch-indicator-marker {
+    -fx-fill: #c9d1d9;
+    -fx-stroke: #c9d1d9;
+}
+.furnace-chart .value-watch-indicator-label,
+.furnace-chart .value-indicator-label,
+.furnace-chart .range-indicator-label {
+    -fx-text-fill: #c9d1d9;
+    -fx-fill: #c9d1d9;
+}
+.furnace-chart .value-watch-indicator-label .text,
+.furnace-chart .value-indicator-label .text,
+.furnace-chart .range-indicator-label .text {
+    -fx-fill: #c9d1d9;
+}
+
+.value-watch-indicator-label,
+.value-indicator-label,
+.range-indicator-label {
+    -fx-text-fill: #c9d1d9;
+    -fx-fill: #c9d1d9;
+    -fx-background-color: rgba(22, 27, 34, 0.92);
+    -fx-border-color: #6e7681;
+}
+.value-watch-indicator-label .text,
+.value-indicator-label .text,
+.range-indicator-label .text {
+    -fx-fill: #c9d1d9;
+}
