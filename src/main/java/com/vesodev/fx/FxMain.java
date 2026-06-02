@@ -1,6 +1,7 @@
 package com.vesodev.fx;
 
 import com.vesodev.LogParser;
+import com.vesodev.MonitorProcess;
 import javafx.animation.KeyFrame;
 import javafx.animation.Timeline;
 import javafx.application.Application;
@@ -74,9 +75,12 @@ public class FxMain extends Application {
     private final Label timelineLabel = new Label("live");
     private final CheckBox followLive = new CheckBox("Follow live");
     private final CheckBox fixedYRange = new CheckBox("Fixed Y");
+    private final TextField commandField = new TextField("idf.py monitor");
+    private final Button liveCommandButton = new Button("Start");
     private final TextField yMinField = new TextField("0");
     private final TextField yMaxField = new TextField("300");
     private final Button applyYRangeBtn = new Button("Apply Y");
+    private final MonitorProcess monitorProcess = new MonitorProcess();
 
     // Live PID / process labels
     private final Label elapsedValue = new Label("N/A");
@@ -179,15 +183,19 @@ public class FxMain extends Application {
         HBox topRight = new HBox(8, autoScroll, showPidAnnotations, showTempAnnotations, followLive, exportBtn);
         HBox.setHgrow(topLeft, Priority.ALWAYS);
 
+        commandField.setPromptText("Enter idf.py command");
+        HBox.setHgrow(commandField, Priority.ALWAYS);
+
         yMinField.setPrefColumnCount(5);
         yMaxField.setPrefColumnCount(5);
+        HBox liveCommandRow = new HBox(8, new Label("Live command:"), commandField, liveCommandButton);
         HBox fixedYRow = new HBox(8, fixedYRange, new Label("Y min"), yMinField, new Label("Y max"), yMaxField, applyYRangeBtn);
         HBox timelineRow = new HBox(8, new Label("Timeline:"), timelineSlider, timelineLabel);
         HBox.setHgrow(timelineSlider, Priority.ALWAYS);
 
         VBox topPanel = new VBox(4);
         topPanel.setPadding(new Insets(8));
-        topPanel.getChildren().addAll(new HBox(8, topLeft, topRight), new HBox(8, new Label("Window:"), timeWindowSlider, timeWindowLabel), timelineRow, fixedYRow, fileLabel);
+        topPanel.getChildren().addAll(new HBox(8, topLeft, topRight), liveCommandRow, new HBox(8, new Label("Window:"), timeWindowSlider, timeWindowLabel), timelineRow, fixedYRow, fileLabel);
 
         VBox rightPanel = FxLayout.buildRightPanel(
             logList,
@@ -219,6 +227,8 @@ public class FxMain extends Application {
         loadSampleBtn.setOnAction(e -> loadDefaultSample());
         browseSampleBtn.setOnAction(e -> browseSampleFile(primaryStage));
         exportBtn.setOnAction(e -> exportReport(primaryStage));
+        liveCommandButton.setOnAction(e -> toggleLiveCommand());
+        commandField.setOnAction(e -> toggleLiveCommand());
 
         showPidAnnotations.setOnAction(e -> refreshAllAnnotations());
         showTempAnnotations.setOnAction(e -> refreshAllAnnotations());
@@ -516,6 +526,7 @@ public class FxMain extends Application {
     @Override
     public void stop() {
         stopSamplePlayback();
+        stopLiveCommand();
         if (uiFlushTimer != null) {
             uiFlushTimer.stop();
         }
@@ -541,6 +552,74 @@ public class FxMain extends Application {
                 logList.scrollTo(last);
             }
         }
+    }
+
+    private void toggleLiveCommand() {
+        if (monitorProcess.isRunning()) {
+            stopLiveCommand();
+            return;
+        }
+        startLiveCommand();
+    }
+
+    private void startLiveCommand() {
+        String command = commandField.getText() == null ? "" : commandField.getText().trim();
+        if (command.isEmpty()) {
+            appendLog("Enter an idf.py command before starting.");
+            return;
+        }
+
+        stopSamplePlayback();
+        clearAllData();
+        logList.getItems().clear();
+        fileLabel.setText("Live command: " + command);
+        setLiveCommandRunning(true);
+        appendLog("Starting command: " + command);
+
+        Thread starter = new Thread(() -> {
+            try {
+                monitorProcess.start(command, System.getProperty("user.dir"), line ->
+                        Platform.runLater(() -> handleLine(line)));
+            } catch (Exception ex) {
+                Platform.runLater(() -> {
+                    appendLog("Failed to start command: " + ex.getMessage());
+                    setLiveCommandRunning(false);
+                });
+                return;
+            }
+
+            while (monitorProcess.isRunning()) {
+                try {
+                    Thread.sleep(200);
+                } catch (InterruptedException ignored) {
+                    Thread.currentThread().interrupt();
+                    break;
+                }
+            }
+
+            Platform.runLater(() -> {
+                if (!monitorProcess.isRunning()) {
+                    appendLog("Command stopped.");
+                    setLiveCommandRunning(false);
+                }
+            });
+        }, "LiveCommand-Starter");
+        starter.setDaemon(true);
+        starter.start();
+    }
+
+    private void stopLiveCommand() {
+        boolean wasRunning = monitorProcess.isRunning();
+        monitorProcess.stop();
+        setLiveCommandRunning(false);
+        if (wasRunning) {
+            appendLog("Stopping command...");
+        }
+    }
+
+    private void setLiveCommandRunning(boolean running) {
+        liveCommandButton.setText(running ? "Stop" : "Start");
+        commandField.setDisable(running);
     }
 
     private void flushPendingUiEvents() {
